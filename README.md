@@ -1,6 +1,6 @@
-# third Person Mod
-
-Allows you to play in third person
+# Motion Blur Disabler
+ 
+ Disables the motion blur of the trail
 
 ## Credits
 
