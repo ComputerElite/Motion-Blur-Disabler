@@ -1,22 +1,22 @@
 {
   "id": "MotionBlurDisabler",
   "name": "Motion Blur Disabler",
-  "version": "0.1.0",
+  "version": "1.2.0",
   "author": "ComputerElite/FutureMapper",
   "description": [
     "Disables the white motion Blur. Originally made by FutureMapper"
   ],
   "category": "Gameplay",
-  "gameVersion": "1.12.2",
+  "gameVersion": "1.13.0",
   "platform": "Quest",
   "components": [
     {
       "type": "HookMod",
       "installAction": {
-        "installLibraryFile": "lib3rdperview_0_1_0.so"
+        "installLibraryFile": "libMotionBlurDisabler_1_2_0.so"
       },
       "uninstallAction": {
-        "removeLibraryFile": "lib3rdperview_0_1_0.so"
+        "removeLibraryFile": "libMotionBlurDisabler_1_2_0.so"
       }
     },
     {
