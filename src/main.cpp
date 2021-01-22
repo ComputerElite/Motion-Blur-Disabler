@@ -12,9 +12,9 @@ Configuration& getConfig() {
     return config;
 }
 
-const Logger& getLogger() {
-    static const Logger logger(modInfo);
-    return logger;
+Logger& getLogger() {
+    static Logger* logger = new Logger(modInfo, LoggerOptions(false, true));
+    return *logger;
 }
 
 MAKE_HOOK_OFFSETLESS(SaberTrail_LateUpdate, void, SaberTrail* self) {
@@ -36,7 +36,7 @@ extern "C" void load() {
     getLogger().info("Installing hooks...");
     il2cpp_functions::Init();
     // Install our hooks
-    
-    INSTALL_HOOK_OFFSETLESS(SaberTrail_LateUpdate, il2cpp_utils::FindMethodUnsafe("", "SaberTrail", "LateUpdate", 0));
+    LoggerContextObject logger = getLogger().WithContext("load");
+    INSTALL_HOOK_OFFSETLESS(logger, SaberTrail_LateUpdate, il2cpp_utils::FindMethodUnsafe("", "SaberTrail", "LateUpdate", 0));
     getLogger().info("Installed all hooks!");
 }
