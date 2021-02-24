@@ -1,6 +1,9 @@
 # Motion Blur Disabler
  
  Disables the motion blur of the trail
+ 
+ **Note:**
+ In Beat Saber 1.13.2 with the new Qosmetics there is this mod built in. You have to go to the saber menu and set white trail to 0
 
 ## Credits
 
